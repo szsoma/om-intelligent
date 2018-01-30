@@ -6,8 +6,13 @@ html{
 
 body {
     font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 300;
     line-height: 1.33;
     color: #222;
+}
+
+.container {
+    margin-bottom: 8rem;
 }
 
 nav {
@@ -20,12 +25,12 @@ nav {
 
 .banner {
     width: 100%;
-    background: linear-gradient(to right,#e37b00,#f7931d);
+    background: linear-gradient(to right,rgba(227, 123, 0, .9),rgba(247, 147, 29, .9)), url("../img/hill.jpg");
     background-size: cover;
 }
 
 .banner-content {
-    margin: 5rem auto;
+    margin: 5rem 0;
 }
 
 h1 {
@@ -38,7 +43,6 @@ h1 {
 }
 
 .banner p {
-
     color: #fff;
     font-weight: 300;
     font-size: 2.4rem;
@@ -46,7 +50,8 @@ h1 {
 
 /*    /Banner    */
 
-/*    Header    */
+/*    Content-Header    */
+
 .content-header {
     margin: 8rem auto;
 }
@@ -61,10 +66,10 @@ h3 {
     font-weight: 300;
 }
 
-.content-header::after {
+h3::after {
     position: absolute;
     content: '';
-    margin: 4.3rem 0;
+    margin: 8rem 0;
     left: 50%;
     transform: translateX(-50%);
     width: 100px;
@@ -72,8 +77,29 @@ h3 {
     background-color: #f7931d;
 }
 
-/*    /Header    */
+/*    /Content-Header    */
 
+/*    Advantages    */
+
+.advantages .row {
+    margin: 5rem auto;
+}
+
+.svg-image {
+    margin: 3rem auto;
+}
+
+.advantages-texts h4 {
+    font-size: 3rem;
+    font-weight: 600;
+    padding-bottom: 2rem;
+}
+
+.advantages-texts p {
+    font-size: 1.8rem;
+}
+
+/*    /Advantages    */
 
 /*   Media Querri's   */
 
@@ -100,7 +126,7 @@ h3 {
     /*    Banner    */
 
     .banner {
-        height: 698px;
+        height: 69.8rem;
     }
 
     .banner-content {
@@ -109,4 +135,17 @@ h3 {
     }
 
     /*    /Banner    */
+
+    
+    /*    Advantages    */
+
+    .svg-image {
+        width: 85%;
+        height: 85%;
+    }
+    .advantages-texts {
+        vertical-align: middle;
+    }
+
+    /*    /Advantages    */
 }
