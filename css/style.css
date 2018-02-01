@@ -9,16 +9,12 @@ body {
     font-weight: 300;
     line-height: 1.33;
     color: #222;
+    text-align: center;
 }
 
 .text-sm-center,
 .text-xs-center {
     text-align: center;
-}
-
-.row {
-    margin-right: 2rem;
-    margin-left: 2rem;
 }
 
 nav {
@@ -39,11 +35,11 @@ nav {
     background-size: cover;
 }
 
-.banner .container .row {
-    margin: 5rem 2rem;
+.banner-content {
+    margin: 5rem auto;
 }
 
-h1 {
+.banner-title {
     color: #fff;
     font-weight: 700;
     font-size: 4.6rem;
@@ -52,7 +48,7 @@ h1 {
     margin-bottom: 3rem;
 }
 
-.banner p {
+.banner-subtitle {
     color: #fff;
     font-weight: 300;
     font-size: 2.3rem;
@@ -67,15 +63,16 @@ h1 {
 }
 
 .content-header {
+    text-align: center;
     margin: 6rem auto;
 }
 
-h2 {
+.header-title {
     font-size: 3.5rem;
     font-weight: 600;
 }
 
-h3 {
+.header-subtitle {
     font-size: 2.8rem;
     font-weight: 300;
     margin-bottom: 8rem;
@@ -96,22 +93,33 @@ h3:after {
 
 /*    Advantages    */
 
-.advantages .row {
+.first-adv,
+.second-adv,
+.third-adv {
     margin-bottom: 5rem;
+}
+
+.btn-wrapper {
+    text-align: center;
+    margin: 4rem auto;
 }
 
 .svg-image {
     margin: 3rem auto;
 }
 
-h4 {
+.advantages-title, .popup-title {
     font-size: 3rem;
     font-weight: 600;
     padding-bottom: 2rem;
 }
 
-.advantages-texts p {
+.advantages-p {
     font-size: 1.8rem;
+}
+
+.advantages .btn-wrapper {
+    margin: 5rem auto;
 }
 
 .btn-primary, 
@@ -124,7 +132,6 @@ h4 {
     border-radius: 0;
     border: 1px solid #f7931d;
     transition: all ease-in-out 300ms;
-    box-sizing: border-box;
     white-space: normal;
 }
 
@@ -148,7 +155,7 @@ h4 {
 .product-rec-works {
     width: 100%;
     background-color: #f5f5f5;
-    margin-bottom: 0;
+    margin-bottom: -2rem;
 }
 
 .section-colored {
@@ -159,14 +166,16 @@ h4 {
     margin-top: 4rem;
 }
 
-.product-rec-works-text ol {
+.ordered-process {
+    margin: 4rem;
     list-style-type: none;
     justify-content: center;
+    text-align: left;
 }
 
 .product-rec-works-text li{
 	position: relative;
-	padding: 1em;
+	padding: 2rem;
     font-size: 2.2rem;
     counter-increment: list +1;
 }
@@ -198,15 +207,11 @@ h4 {
     background: #e8eef0;
 }
 
-.product-rec-offers {
-    margin: 8rem auto;
-}
-
 .maximize-your-sales .content-header {
     margin-top: 0;
 }
 
-h5 {
+.popup-subtitle {
     font-size: 1.8rem;
     line-height: 1.5;
 }
@@ -217,29 +222,43 @@ h5 {
 }
 
 .product-rec-offers li {
-    padding-left: 2.4rem;
-    margin: 2rem auto;
+    margin: 2rem;
 }
 
 .product-rec-offers li:before {
     content: url('../img/checked.svg');
+    position: absolute;
     display: inline-block;
-    margin-left: -2.4rem;
-    width: 2rem;
+    width: 5rem;
+    padding: 1.5rem;
+    left: 1rem;
+    margin-top: -1.5rem;
 }
 
-.maximize-your-sales img {
+.popup-img-left,
+.popup-img-right {
     box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.2);
+    margin: 2rem auto;
 }
 
 .opinion {
-    padding: 4rem;
-    margin: 0;
+    padding: 2rem;
+    background-color: #363636;
+    margin: 3rem;
     color: #f7931d;
 }
 
 .opinion-text {
+    padding: 4rem;
     color: #fff;
+    font-size: 1.8rem;
+    padding: 2rem;
+}
+
+.list-right,
+.list-left {
+    text-align: left;
+    margin: 2rem auto;
 }
 
 .btn-secondary, 
@@ -263,10 +282,19 @@ h5 {
     background-color: #f7931d;
     color: #fff;
     border: 1px solid #f7931d;
-    box-shadow: 0px 8px 20px 0 rgba(247, 147, 29, 0.2);}
+    box-shadow: 0px 8px 20px 0 rgba(247, 147, 29, 0.2);
+}
+
+.opinion-web,
+.opinion-web:hover, 
+.opinion-web:active, 
+.opinion-web:visited {
+    color: #f7931d;
+    cursor: pointer;
+    text-decoration: none;
+}
 
 /*    /Maximize-your-sales    */
-
 
 /*   Media Querri's   */
 
@@ -300,11 +328,85 @@ h5 {
     /*    Banner    */
 
     .banner-content {
+        text-align: left;
         padding-top: 8rem;
         padding-bottom: 8rem;
     }
 
     /*    /Banner    */
+
+    /*    Advantages    */
+
+    .second-adv {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .second-texts {
+        order: 1;
+    }
+    
+    .second-image {
+        order: 2;
+    }
+
+    .svg-image {
+        width: 85%;
+        height: 85%;
+    }
+
+
+    /*    /Advantages    */
+
+    /*    Maximize-your-sales    */
+
+    .single-right {
+        left: 5rem;
+        padding: 0;
+    }
+
+    .multiple-left {
+        right: 5rem;
+        padding: 0;
+    }
+
+    .bg-wrapper {
+        width: 100%;
+        height: 60rem;
+        background: url('../img/china.jpg') no-repeat;
+        background-position: bottom;
+        margin-top: -58rem;
+    }
+
+    .multiple-left:after {
+        content: '';
+        position: absolute;
+        width: 2px;
+        height: 744px;
+        background-color: #fafafa;
+        top: 1rem;
+        margin-left: 5rem; 
+    }
+
+    .list-right {
+        text-align: right;
+    }
+
+    .list-right li:before {
+        right: 1rem;
+        left: auto;
+    }
+
+    .opinion {
+        background: none;
+        padding: 0;
+    }
+
+    .opinion-text {
+        padding: 0;
+    }
+
+    /*    /Maximize-your-sales    */
 
 }
 
@@ -321,11 +423,6 @@ h5 {
     .text-md-left {
         text-align: left;
     }
-
-    .row {
-        margin-right: 0;
-        margin-left: 0;
-    }
     
     /*    Banner    */
 
@@ -338,7 +435,7 @@ h5 {
         padding-bottom: 8rem;
     }
 
-    .banner .hero-imac {
+    .hero-imac {
         padding: 0 4rem;
     }
 
@@ -346,19 +443,68 @@ h5 {
     
     /*    Advantages    */
 
+    .second-texts {
+        order: 1;
+    }
+    
+    .second-image {
+        order: 2;
+    }
+
     .svg-image {
         width: 85%;
         height: 85%;
-    }
-    .advantages-texts {
-        vertical-align: middle;
     }
 
     /*    /Advantages    */
 
     /*    Maximize-your-sales    */
 
+    .single-right {
+        left: 5rem;
+        padding: 0;
+    }
 
+    .multiple-left {
+        right: 5rem;
+        padding: 0;
+    }
+
+    .bg-wrapper {
+        width: 100%;
+        height: 60rem;
+        background: url('../img/china.jpg') no-repeat;
+        background-position: bottom;
+        margin-top: -58rem;
+    }
+
+    .multiple-left:after {
+        content: '';
+        position: absolute;
+        width: 2px;
+        height: 744px;
+        background-color: #fafafa;
+        top: 1rem;
+        margin-left: 5rem; 
+    }
+
+    .list-right {
+        text-align: right;
+    }
+
+    .list-right li:before {
+        right: 1rem;
+        left: auto;
+    } 
+
+    .opinion {
+        background: none;
+        padding: 0;
+    }
+
+    .opinion-text {
+        padding: 0;
+    }
 
     /*    /Maximize-your-sales    */
 
