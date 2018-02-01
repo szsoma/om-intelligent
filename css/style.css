@@ -225,11 +225,12 @@ h3:after {
 
 .product-rec-offers ul {
     list-style: none;
-    padding: 3rem;;
+    padding: 3rem;
 }
 
 .product-rec-offers li {
     margin: 2rem;
+    font-size: 1.4rem;
 }
 
 .product-rec-offers li:before {
