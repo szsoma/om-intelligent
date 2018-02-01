@@ -337,9 +337,8 @@ h3:after {
 
     /*    Advantages    */
 
-    .second-adv {
-        display: flex;
-        flex-direction: row;
+    .advantages {
+        text-align: left;
     }
 
     .second-texts {
@@ -386,6 +385,10 @@ h3:after {
         background-color: #fafafa;
         top: 1rem;
         margin-left: 5rem; 
+    }
+
+    .second-adv {
+        display: flex;
     }
 
     .list-right {
@@ -442,6 +445,14 @@ h3:after {
     /*    /Banner    */
     
     /*    Advantages    */
+
+    .advantages {
+        text-align: left;
+    }
+
+    .second-adv {
+        display: flex;
+    }
 
     .second-texts {
         order: 1;
